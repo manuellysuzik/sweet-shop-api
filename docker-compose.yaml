@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+  postgres-sweet-store:
+    image: postgres:12.5
+    ports:
+      - 5432:5432
+    environment:
+      - POSTGRES_USER=cupcake_store_user
+      - POSTGRES_PASSWORD=cupcake_store_pass

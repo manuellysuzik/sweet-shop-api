@@ -11,9 +11,6 @@ export default class extends BaseSchema {
       table.integer('unit')
       table.float('total', 2)
 
-      table.foreign('user_id').references('users.id')
-      table.foreign('product_id').references('products.id')
-
       table.timestamp('created_at', { useTz: true })
       table.timestamp('updated_at', { useTz: true })
     })
