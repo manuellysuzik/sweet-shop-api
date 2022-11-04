@@ -22,11 +22,9 @@ import HealthCheck from '@ioc:Adonis/Core/HealthCheck'
 import Route from '@ioc:Adonis/Core/Route'
 
 Route.get('/', 'ProductsController.listAll')
-Route.post('/cart', 'CartsController.addProduct')
+Route.post('/cart', 'CartsController.addProducts')
 Route.get('health', async ({ response }) => {
   const report = await HealthCheck.getReport()
 
-  return report.healthy
-    ? response.ok(report)
-    : response.badRequest(report)
+  return report.healthy ? response.ok(report) : response.badRequest(report)
 })

@@ -4,7 +4,7 @@ import { DateTime } from 'luxon'
 
 export default class User extends BaseModel {
   @column({ isPrimary: true })
-  readonly id: number
+  public readonly id: number
   @column()
   public email: string
   @column()
